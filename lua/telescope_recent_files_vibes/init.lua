@@ -249,14 +249,14 @@ function M.recent_files(opts)
 
   local filter_path = opts.filter_path
 
-  local title = "Recent Files (All) | <C-p> Path Filter | <C-j/k> Search History"
+  local title = "Recent Files (All) | <C-S-P> Path Filter | <C-j/k> Search History"
   if filter_path then
     if filter_path == root_cwd then
-      title = "Recent Files [CWD] | <C-p> Path Filter | <C-j/k> Search History"
+      title = "Recent Files [CWD] | <C-S-P> Path Filter | <C-j/k> Search History"
     else
       local relative = Path:new(filter_path):make_relative(root_cwd)
       title = "Recent Files [" ..
-          (relative == "" and "." or relative) .. "] | <C-p> Path Filter | <C-j/k> Search History"
+          (relative == "" and "." or relative) .. "] | <C-S-P> Path Filter | <C-j/k> Search History"
     end
   end
 
@@ -287,11 +287,11 @@ function M.recent_files(opts)
         end
       end)
 
-      map("i", "<C-p>", function()
+      map("i", "<C-S-P>", function()
         show_path_picker(prompt_bufnr, opts)
       end)
 
-      map("n", "<C-p>", function()
+      map("n", "<C-S-P>", function()
         show_path_picker(prompt_bufnr, opts)
       end)
 

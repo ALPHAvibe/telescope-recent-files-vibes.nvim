@@ -1,6 +1,6 @@
 # telescope-recent-files-vibes.nvim
 
-A Telescope extension that enhances recent file navigation with path scoping and search history.
+A Telescope extension that enhances recent file navigation with path scoping and search history with good vibes! 🌟
 
 ## ✨ Features
 
@@ -66,7 +66,7 @@ require("telescope").extensions.recent_files_vibes.recent_files_vibes()
 
 Inside the picker:
 
-- `<C-p>` - Open path filter picker
+- `<C-Shift-p>` - Open path filter picker
 - `<C-j>` or `<C-k>` - Open search history
 - `<Enter>` - Open file and save search to history
 - `<Esc>` - Close picker or go back to previous picker
@@ -119,9 +119,4 @@ vim.keymap.set("n", "<leader>fr", function()
   require("telescope").extensions.recent_files_vibes.recent_files_vibes()
 end, { desc = "Recent Files (Vibes)" })
 ```
-
-
-## 📄 License
-
-MIT
 
